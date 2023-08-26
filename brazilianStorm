@@ -1,0 +1,18 @@
+const notas = [100, 100, 100, 20, 50, 30, 14, 100, 100, 100]
+
+let soma = 0
+let media = 0
+let menor = [notas[0]]
+let maior = [notas[0]]
+
+for (let i of notas) {
+    soma = soma + i
+    if (menor >= i){
+        menor = i
+    } else if (maior <= i){
+        maior = i
+    }
+}
+
+media = (soma - menor - maior) / (notas.length - 2)
+console.log(media)
